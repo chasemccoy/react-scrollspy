@@ -1,7 +1,7 @@
 {
-  "name": "test-pack",
+  "name": "@chasemccoy/react-scrollspy",
   "description": "A simple example Pika package",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "license": "MIT",
   "esnext": "dist-src/index.js",
   "main": "dist-node/index.js",
@@ -27,5 +27,6 @@
     "@pika/plugin-build-node": "^0.3.10",
     "@pika/plugin-build-web": "^0.3.10",
     "@pika/plugin-standard-pkg": "^0.3.10"
-  }
+  },
+  "private": false
 }
