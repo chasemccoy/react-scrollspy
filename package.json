@@ -1,8 +1,9 @@
 {
   "name": "@chasemccoy/react-scrollspy",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple example Pika package",
   "license": "MIT",
+  "private": false,
   "author": "Chase McCoy <chase@sproutsocial.com>",
   "main": "index.js",
   "scripts": {
