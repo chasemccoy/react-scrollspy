@@ -1,0 +1,40 @@
+{
+  "name": "@chasemccoy/react-scrollspy",
+  "version": "0.0.1",
+  "description": "A simple example Pika package",
+  "license": "MIT",
+  "author": "Chase McCoy <chase@sproutsocial.com>",
+  "main": "index.js",
+  "scripts": {
+    "build": "pack build",
+    "release": "pack publish"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@pika/pack": "^0.3.1",
+    "@pika/plugin-build-node": "^0.3.10",
+    "@pika/plugin-build-web": "^0.3.10",
+    "@pika/plugin-standard-pkg": "^0.3.10"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  },
+  "dependencies": {
+    "intersection-observer": "^0.5.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.2"
+  }
+}
