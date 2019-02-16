@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": false,
   "author": "Chase McCoy <chase@sproutsocial.com>",
+  "repository": "chasemccoy/react-scrollspy",
   "main": "index.js",
   "scripts": {
     "build": "pack build",

@@ -12,19 +12,17 @@ class ScrollSpy extends React.Component {
 
   handleObserver = (entries, observer) => {
     entries.forEach(entry => {
-      entries.forEach(entry => {
-        const entryID = entry.target.getAttribute('id')
-        const link = this.links.find(
-          link => link.getAttribute('href') === `#${entryID}`
-        )
+      const entryID = entry.target.getAttribute('id')
+      const link = this.links.find(
+        link => link.getAttribute('href') === `#${entryID}`
+      )
 
-        if (link && entry.isIntersecting && entry.intersectionRatio >= 1) {
-          this.previousLink &&
-            this.previousLink.classList.remove(this.props.activeClassName)
-          link.classList.add(this.props.activeClassName)
-          this.previousLink = link
-        }
-      })
+      if (link && entry.isIntersecting && entry.intersectionRatio >= 1) {
+        this.previousLink &&
+          this.previousLink.classList.remove(this.props.activeClassName)
+        link.classList.add(this.props.activeClassName)
+        this.previousLink = link
+      }
     })
   }
 
@@ -43,8 +41,12 @@ class ScrollSpy extends React.Component {
     }
   }
 
+  componentWillUnmount = () => {
+    this.observer.disconnect()
+  }
+
   render() {
-    return <div ref={el => (this.container = el)}>{this.props.children}</div>
+    return <div ref={el => (this.container = el)} {...this.props} />
   }
 }
 
